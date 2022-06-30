@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
+import swAlert from "@sweetalert/with-react";
 
 const Listado = () => {
 
@@ -13,9 +14,13 @@ const Listado = () => {
           const apiData = response.data;
             setMovieList(apiData.results)
         })
+        .catch(error => {
+            swAlert(<h2>Error al obtener los datos</h2>)
+            console.log(error);
+        });
   }, [setMovieList]);
 
-  let token = localStorage.getItem('token');
+  const token = sessionStorage.getItem('token');
 
   return (
     <>
@@ -28,12 +33,12 @@ const Listado = () => {
             {
                 movieList.map(( movie, i ) => (
                   <div className="col-3" key={i}>
-                    <div className="card">
+                    <div className="card my-4">
                       <img src={ `https://image.tmdb.org/t/p/w500/${movie.poster_path}` } className="card-img-top" alt="..."/>
                         <div className="card-body">
-                          <h5 className="card-title">{movie.title}</h5>
-                          <p className="card-text">{ movie.overview }</p>
-                          <Link to="/" className="btn btn-primary">View detail</Link>
+                          <h5 className="card-title">{ movie.title.substring(0, 30) }...</h5>
+                          <p className="card-text">{ movie.overview.substring(0, 100) }...</p>
+                          <Link to={`/detalle?movieID=${ movie.id }`} className="btn btn-primary">View detail</Link>
                         </div>
                     </div>
                   </div>

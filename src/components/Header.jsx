@@ -11,7 +11,7 @@ const Header = () => {
                     className={ ({ isActive })=> `nav-item nav-link ${ isActive ? 'active' : '' }` }
                     to="/"
                 >
-                    Home
+                    AlkeFlix
                 </NavLink>
 
                 <NavLink 
