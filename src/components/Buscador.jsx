@@ -1,7 +1,9 @@
 import swAlert from "@sweetalert/with-react";
-import useNavigate from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Buscador = () => {
+
+    const navigate = useNavigate();
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -12,7 +14,8 @@ const Buscador = () => {
         } else if(keyword.length < 4) {
             swAlert(<h5>Debes escribir mas de 4 caracteres</h5>);
         } else {
-            <useNavigate />
+            e.currentTarget.value='';
+            navigate(`/resultados?keyword=${keyword}`);
         }
     }
 
