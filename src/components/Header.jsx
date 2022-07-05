@@ -1,11 +1,12 @@
 import { NavLink  } from "react-router-dom"
+import Buscador from "./Buscador"
 
 const Header = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
             
         <div className="navbar-collapse">
-            <div className="navbar-nav">
+            <div className="navbar-nav me-5">
 
                 <NavLink 
                     className={ ({ isActive })=> `nav-item nav-link ${ isActive ? 'active' : '' }` }
@@ -28,6 +29,7 @@ const Header = () => {
                     Contacto
                 </NavLink>
             </div>
+            <Buscador />
         </div>
     </nav>
 

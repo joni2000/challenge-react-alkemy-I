@@ -5,7 +5,8 @@ import { Routes, Route } from "react-router-dom"
 import Listado from "./components/Listado";
 import Login from "./components/Login";
 import Header from "./components/Header";
-import  Detalle  from "./components/Detalle";
+import Detalle from "./components/Detalle";
+import Resultados from "./components/Resultados";
 
 
 /* Styles */
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/" element={ <Login /> }/>
                     <Route path="/listado" element={ <Listado /> }/>
                     <Route path="/detalle" element={ <Detalle /> }/>
+                    <Route path="/resultados" element={<Resultados />}/>
                 </Routes>
             </div>
 
