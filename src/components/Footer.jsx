@@ -1,5 +1,5 @@
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer>
         <nav>
@@ -14,4 +14,3 @@ const Footer = () => {
   )
 }
 
-export default Footer

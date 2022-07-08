@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import swAlert from "@sweetalert/with-react";
 
-const Resultados = () => {
+export const Resultados = () => {
     let query = new URLSearchParams(window.location.search);
 
     let keyword = query.get('keyword');
@@ -52,5 +52,3 @@ const Resultados = () => {
 
     )
 }
-
-export default Resultados

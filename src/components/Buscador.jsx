@@ -1,7 +1,7 @@
 import swAlert from "@sweetalert/with-react";
 import { useNavigate } from "react-router-dom";
 
-const Buscador = () => {
+export const Buscador = () => {
 
     const navigate = useNavigate();
 
@@ -29,4 +29,3 @@ const Buscador = () => {
   )
 }
 
-export default Buscador

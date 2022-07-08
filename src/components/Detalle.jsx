@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
 
-const Detalle = () => {
+export const Detalle = () => {
 
     const [movie, setMovie] = useState(null);
 
@@ -60,5 +60,4 @@ const Detalle = () => {
     )
 }
 
-export default Detalle
 

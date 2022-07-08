@@ -3,7 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import swAlert from "@sweetalert/with-react";
 
-const Listado = ({ addOrRemoveFromFavs }) => {
+export const Listado = ({ addOrRemoveFromFavs }) => {
 
   const [movieList, setMovieList] = useState([]);
 
@@ -31,7 +31,6 @@ const Listado = ({ addOrRemoveFromFavs }) => {
           <Navigate to='/'/> 
                : 
           <div className="row">
-            {/* estructura base */}
             {
                 movieList.map(( movie, i ) => (
                   <div className="col-3" key={i}>
@@ -60,5 +59,3 @@ const Listado = ({ addOrRemoveFromFavs }) => {
     </>
   )
 }
-
-export default Listado

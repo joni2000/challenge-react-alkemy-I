@@ -1,7 +1,7 @@
 import { NavLink  } from "react-router-dom"
-import Buscador from "./Buscador"
+import { Buscador } from "../components"
 
-const Header = () => {
+export const Header = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
             
@@ -24,9 +24,9 @@ const Header = () => {
 
                 <NavLink 
                     className={ ({ isActive })=> `nav-item nav-link ${ isActive ? 'active' : '' }` }
-                    to="/contacto"
+                    to="/Favoritos"
                 >
-                    Contacto
+                    Favoritos
                 </NavLink>
             </div>
             <Buscador />
@@ -51,4 +51,3 @@ const Header = () => {
     )
 }
 
-export default Header
